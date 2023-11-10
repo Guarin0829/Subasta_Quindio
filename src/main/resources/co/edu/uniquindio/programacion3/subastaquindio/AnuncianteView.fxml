@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.programacion3.subastaquindio.viewController.ProductoViewController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9fcff" height="60.0" layoutX="5.0" layoutY="272.0" stroke="BLACK" strokeType="INSIDE" width="744.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9fcff" height="252.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="744.0" />
+        <GridPane layoutX="45.0" layoutY="81.0" prefHeight="119.0" prefWidth="306.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="0.0" prefWidth="8.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="txfNombreProducto" prefHeight="30.0" prefWidth="149.0" promptText="Ingrese el nombre del anunciante" GridPane.rowIndex="3" />
+                <Label prefHeight="20.0" prefWidth="168.0" text="Nombre del Anunciante:">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label prefHeight="20.0" prefWidth="169.0" text="Apellido del Anunciante:" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <TextField fx:id="txfAnunciante" prefHeight="30.0" prefWidth="149.0" promptText="Anunciante ..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label prefHeight="17.0" prefWidth="148.0" text="Fecha de Publicación:" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label prefHeight="20.0" prefWidth="158.0" text="Fin fecha de Publicación:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label prefHeight="12.0" prefWidth="142.0" text="Valor Inicial:" GridPane.rowIndex="8">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="12.0" prefWidth="142.0" text="Tipo Producto:" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txfValorInicial" prefHeight="30.0" prefWidth="149.0" promptText="Ingrese el valor inicial ..." GridPane.rowIndex="9" />
+                <TextField fx:id="txfTipoProducto" promptText="To de producto ..." GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                <TextField fx:id="txfFechaPublicacion" GridPane.rowIndex="6" />
+                <TextField fx:id="txfFechaFinPublicacion" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="Label" GridPane.columnIndex="4" />
+            </children>
+        </GridPane>
+        <Label layoutX="23.0" layoutY="179.0" prefHeight="17.0" prefWidth="96.0" text="Código Único:" />
+        <TextField fx:id="txfCodigoUnico" layoutX="23.0" layoutY="206.0" prefHeight="25.0" prefWidth="209.0" promptText="Código se genera automáticamente" />
+        <GridPane layoutX="207.0" layoutY="286.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="15.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="25.0" prefWidth="99.0" text="Agregar" />
+                <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#actualizarProducto" prefHeight="25.0" prefWidth="99.0" text="Actualizar" GridPane.columnIndex="2" />
+                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="25.0" prefWidth="99.0" text="Eliminar" GridPane.columnIndex="4" />
+            </children>
+        </GridPane>
+        <TableView fx:id="tableProductos" layoutX="6.0" layoutY="337.0" prefHeight="151.0" prefWidth="744.0">
+            <columns>
+                <TableColumn fx:id="colCodigoUnico" prefWidth="85.0" text="Código Único" />
+                <TableColumn fx:id="colNombreProducto" prefWidth="107.5" text="Nombre Producto" />
+                <TableColumn fx:id="colDescripcion" minWidth="8.0" prefWidth="70.5" text="Descripción" />
+                <TableColumn fx:id="colAnunciante" prefWidth="69.0" text="Anunciante" />
+                <TableColumn fx:id="colTipoProducto" prefWidth="92.0" text="Tipo Produccto" />
+                <TableColumn fx:id="colFechaPublicacion" prefWidth="107.0" text="Fecha publicación" />
+                <TableColumn fx:id="colFechaFinPublicacion" prefWidth="124.0" text="Fecha fin publicación" />
+                <TableColumn fx:id="colValorInicial" prefWidth="88.0" text="Valor Inicial" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

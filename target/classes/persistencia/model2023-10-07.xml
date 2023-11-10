@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.7" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.programacion3.subastaquindio.model.SubastaQuindio" id="SubastaQuindio0">
+  <void property="listaProducto">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
+     <void property="anunciante">
+      <string>Carlos Montes</string>
+     </void>
+     <void property="codigoUnico">
+      <string>1234</string>
+     </void>
+     <void property="descripcion">
+      <string>lavadora casi nueva</string>
+     </void>
+     <void property="fechaFinPublicacion">
+      <string>29-09-2023</string>
+     </void>
+     <void property="fechaPublicacion">
+      <string>29-09-2023</string>
+     </void>
+     <void property="nombreProducto">
+      <string>binario</string>
+     </void>
+     <void property="tipoProducto">
+      <string>HOGAR</string>
+     </void>
+     <void property="valorInicial">
+      <double>45200.0</double>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaUsuarios">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Usuario">
+     <void property="contrasenia">
+      <string>1978</string>
+     </void>
+     <void property="usuario">
+      <string>Yovanny</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Usuario">
+     <void property="contrasenia">
+      <string>1980</string>
+     </void>
+     <void property="usuario">
+      <string>Pablo</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
