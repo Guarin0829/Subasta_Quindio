@@ -132,3 +132,7 @@ nov. 12, 2023 9:41:51 A. M. co.edu.uniquindio.programacion3.subastaquindio.util
 INFORMACIÓN: Inicio sesión,Inicio de sesión incorrecto,2023-11-12
 nov. 12, 2023 9:42:03 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: Inicio sesión,Inicio de sesión incorrecto,2023-11-12
+nov. 12, 2023 1:28:50 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-12
+nov. 12, 2023 1:29:12 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-12

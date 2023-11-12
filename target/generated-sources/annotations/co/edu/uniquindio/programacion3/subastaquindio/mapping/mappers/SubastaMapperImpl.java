@@ -15,8 +15,8 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-12T09:39:05-0500",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.8 (Amazon.com Inc.)"
+    date = "2023-11-12T13:28:33-0500",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
 public class SubastaMapperImpl implements SubastaMapper {
