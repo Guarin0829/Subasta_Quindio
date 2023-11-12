@@ -53,4 +53,5 @@ public interface SubastaMapper {
     @IterableMapping(qualifiedByName = "compradorToCompradorDto")
     List<CompradorDto> getCompradorDto(List<Comprador> listaCompradores);
 
+
 }

@@ -23,7 +23,7 @@ public class Usuario implements Serializable {
         this.rol = rol;
     }
 
-    // contsructir sin parametros
+    // contsructor sin parametros
 
     public String getUsuario() {
         return usuario;

@@ -11,7 +11,7 @@ public record AnuncianteDto(
         String usuarioAsociado) {
 
     public UsuarioDto getUsuarioAsociado(){
-        return new UsuarioDto(usuarioAsociado, "","");
+        return new UsuarioDto(usuarioAsociado, "", "");
     }
 
     @Override

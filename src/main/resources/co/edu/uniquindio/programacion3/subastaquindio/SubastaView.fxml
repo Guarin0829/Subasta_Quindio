@@ -10,14 +10,30 @@
       <TabPane layoutX="-6.0" layoutY="-8.0" prefHeight="500.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Anunciantes">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="750.0" />
-            </content>
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                          <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+                              <items>
+                                  <fx:include source="AnuncianteView.fxml" />
+                              </items>
+                          </SplitPane>
+                      </children>
+                  </AnchorPane>
+              </content>
           </Tab>
           <Tab text="Compradores">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                          <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+                              <items>
+                                  <fx:include source="CompradorView.fxml" />
+                              </items>
+                          </SplitPane>
+                      </children>
+                  </AnchorPane>
+              </content>
           </Tab>
             <Tab text="Productos">
                <content>
@@ -38,9 +54,17 @@
               </content>
             </Tab>
             <Tab text="Usuarios">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane layoutX="6.0" layoutY="6.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="790.0">
+                                <items>
+                                    <fx:include source="UsuarioView.fxml" />
+                                </items>
+                            </SplitPane>
+                        </children>
+                    </AnchorPane>
+                </content>
             </Tab>
         </tabs>
       </TabPane>

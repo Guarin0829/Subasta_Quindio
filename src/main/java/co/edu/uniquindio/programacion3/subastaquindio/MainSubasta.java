@@ -17,7 +17,7 @@ public class MainSubasta {
                 "Carro nuevo",
                 "TECNOLOGIA",
                 "",
-                "Yarley Camilo Mejía",
+                "Daniela",
                 "2023-08-12",
                 "2023-08-21",
                 1223.00
