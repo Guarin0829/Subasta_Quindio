@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.8" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.programacion3.subastaquindio.model.SubastaQuindio" id="SubastaQuindio0">
+  <void property="listaProductos">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
+     <void property="codigoUnico">
+      <string>1243</string>
+     </void>
+     <void property="nombreAnunciante">
+      <string>Carlos Montes</string>
+     </void>
+     <void property="nombreProducto">
+      <string>Lavadora Haceb</string>
+     </void>
+     <void property="tipoProducto">
+      <string>HOGAR</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaUsuarios">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Usuario">
+     <void property="contrasenia">
+      <string>2019</string>
+     </void>
+     <void property="rol">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.programacion3.subastaquindio.enumm.Rol</class>
+       <string>Comprador</string>
+      </object>
+     </void>
+     <void property="usuario">
+      <string>Matias</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Usuario">
+     <void property="contrasenia">
+      <string>2022</string>
+     </void>
+     <void property="rol">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.programacion3.subastaquindio.enumm.Rol</class>
+       <string>Anunciante</string>
+      </object>
+     </void>
+     <void property="usuario">
+      <string>Jorge</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
