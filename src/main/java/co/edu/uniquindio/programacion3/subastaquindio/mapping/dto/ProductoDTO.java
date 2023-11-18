@@ -6,7 +6,7 @@ public record ProductoDTO(
         String nombreProducto,
         String tipoProducto,
         String foto,
-        String nombreAnunciante){
+        String nombreAnunciante) {
 
     public AnuncianteDto getAnunciante(){
         return new AnuncianteDto(nombreAnunciante, "","", "", "", "", "", "");

@@ -1,6 +1,0 @@
-  src/main/resources/persistencia/respaldo/subastaRespaldo_18112023_09_43_19.xml
-        src/main/resources/persistencia/respaldo/subastaRespaldo_18112023_10_04_26.xml
-        target/classes/persistencia/respaldo/subastaRespaldo_12112023_09_41_48.xml
-        target/classes/persistencia/respaldo/subastaRespaldo_12112023_13_28_50.xml
-        target/classes/persistencia/respaldo/subastaRespaldo_18112023_09_43_19.xml
-
