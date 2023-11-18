@@ -16,12 +16,7 @@ public class MainSubasta {
                 "Renault Logan",
                 "Carro nuevo",
                 "TECNOLOGIA",
-                "",
-                "Daniela",
-                "2023-08-12",
-                "2023-08-21",
-                1223.00
-        );
+                "Daniela");
 
         if (modelFactoryController.agregarProducto(productoDto)) {
             System.out.println("No existe se agrgeo correctamente");

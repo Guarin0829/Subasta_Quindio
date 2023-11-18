@@ -1,15 +1,16 @@
 package co.edu.uniquindio.programacion3.subastaquindio.viewController;
 
 import co.edu.uniquindio.programacion3.subastaquindio.controller.ProductoController;
-import co.edu.uniquindio.programacion3.subastaquindio.controller.service.IProductoControllerService;
+import co.edu.uniquindio.programacion3.subastaquindio.enumm.TipoProducto;
+import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncianteDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ProductoDTO;
-import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 
 import java.util.Optional;
 
@@ -24,13 +25,22 @@ public class ProductoViewController {
 
     ObservableList<ProductoDTO> listaProductosDto = FXCollections.observableArrayList();
 
+    ObservableList<AnuncianteDto> listaAnunciantesDto = FXCollections.observableArrayList();
+    ObservableList<String> listaTipoProducto = FXCollections.observableArrayList();
+
     ProductoDTO productoSeleccionado;
+
+    @FXML
+    private ImageView imageViewFoto;
 
     @FXML
     private Button btnActualizar;
 
     @FXML
     private Button btnAgregar;
+
+    @FXML
+    private Button btnBuscar;
 
     @FXML
     private Button btnEliminar;
@@ -42,58 +52,36 @@ public class ProductoViewController {
     private TableColumn<ProductoDTO, String> colCodigoUnico;
 
     @FXML
-    private TableColumn<ProductoDTO, String> colDescripcion;
-
-    @FXML
-    private TableColumn<ProductoDTO, String> colFechaFinPublicacion;
-
-    @FXML
-    private TableColumn<ProductoDTO, String> colFechaPublicacion;
-
-    @FXML
     private TableColumn<ProductoDTO, String> colNombreProducto;
 
     @FXML
     private TableColumn<ProductoDTO, String> colTipoProducto;
 
-    @FXML
-    private TableColumn<ProductoDTO, String> colValorInicial;
+
 
     @FXML
     private TableView<ProductoDTO> tableProductos;
 
     @FXML
-    private TextArea txaDescripcion;
+    private ComboBox<AnuncianteDto> cmbAnunciante;
 
     @FXML
-    private TextField txfAnunciante;
+    private ComboBox<String> cmbTipoProducto;
 
     @FXML
     private TextField txfCodigoUnico;
 
     @FXML
-    private TextField txfFechaFinPublicacion;
-
-    @FXML
-    private TextField txfFechaPublicacion;
-
-    @FXML
     private TextField txfNombreProducto;
 
-    @FXML
-    private TextField txfTipoProducto;
-
-    @FXML
-    private TextField txfValorInicial;
 
     @FXML
     void actualizarProducto(ActionEvent event) {
-    actualizarProducto();
+        actualizarProducto();
     }
 
     @FXML
     void agregarProducto(ActionEvent event) {
-
         crearProducto();
     }
 
@@ -101,6 +89,34 @@ public class ProductoViewController {
     void eliminarProducto(ActionEvent event) {
         eliminarProducto();
     }
+
+    @FXML
+    void seleccionarImagen(ActionEvent event) {
+        seleccionarImagen();
+    }
+
+    private void seleccionarImagen() { //Pendiente ruta de imagen
+        System.out.println("p");
+    }
+
+
+    @FXML
+    void busquedaProducto(ActionEvent event) {
+        String codigoUnico = txfCodigoUnico.getText();
+        String nombreProducto = txfNombreProducto.getText();
+        String nombreAnunciante = String.valueOf(cmbAnunciante.getValue());
+        String tipoProducto = cmbTipoProducto.getValue();
+
+ //       buscarProducto(codigoUnico, nombreProducto, nombreAnunciante, tipoProducto);
+    }
+
+
+
+    private void busquedaProducto() { // método implementado del action event
+        System.out.println("Prueba de buscarProducto");
+    }
+
+
 
     private void crearProducto(){
 
@@ -176,26 +192,32 @@ public class ProductoViewController {
         return new ProductoDTO(
                 txfCodigoUnico.getText(), // captura lo que se escribe en la tabla
                 txfNombreProducto.getText(),
-                txaDescripcion.getText(),
-                txfTipoProducto.getText(),
+                cmbTipoProducto.getValue(),
                 "",
-                txfAnunciante.getText(),
-                txfFechaPublicacion.getText(),
-                txfFechaFinPublicacion.getText(),
-                Double.valueOf(txfValorInicial.getText())
+                String.valueOf(cmbAnunciante.getValue())
         );
 
+    }
+
+    public void mostrarTipoProducto(){
+        listaTipoProducto.add(String.valueOf(TipoProducto.TECNOLOGIA));
+        listaTipoProducto.add(String.valueOf(TipoProducto.HOGAR));
+        listaTipoProducto.add(String.valueOf(TipoProducto.DEPORTES));
+        listaTipoProducto.add(String.valueOf(TipoProducto.VEHICULOS));
+        listaTipoProducto.add(String.valueOf(TipoProducto.BIEN_RAIZ));
+        cmbTipoProducto.setItems(listaTipoProducto);
+    }
+
+    public ObservableList<AnuncianteDto> getListaAnunciantes() {
+        listaAnunciantesDto.addAll(productoControllerService.obtenerAnunciantes());
+        return listaAnunciantesDto;
     }
 
     private void limpiarCamposProductos(){
         txfCodigoUnico.setText("");
         txfNombreProducto.setText("");
-        txfAnunciante.setText("");
-        txfValorInicial.setText("");
-        txaDescripcion.setText("");
-        txfFechaPublicacion.setText("");
-        txfFechaFinPublicacion.setText("");
-        txfTipoProducto.setText("");
+        cmbAnunciante.setValue(null);
+        cmbTipoProducto.setValue(null);
     }
 
     private boolean datosValidos(ProductoDTO productoDto){
@@ -206,14 +228,6 @@ public class ProductoViewController {
             mensaje += "El nombre del anunciante es inválido \n" ;
         if(productoDto.codigoUnico() == null || productoDto.codigoUnico().equals(""))
             mensaje += "El código único del anunciate es inválido \n" ;
-        if(productoDto.valorInicial() == null)
-            mensaje += "El valor inicial de la puja es inválido \n" ;
-        if(productoDto.descripcion() == null || productoDto.descripcion().equals(""))
-            mensaje += "La descripción de la puja es inválida \n" ;
-        if(productoDto.fechaPublicacion() == null || productoDto.fechaPublicacion().equals(""))
-            mensaje += "La fecha de publicación es inválida \n" ;
-        if(productoDto.fechaFinPublicacion() == null || productoDto.fechaFinPublicacion().equals(""))
-            mensaje += "La fecha de fin publicación es inválida \n" ;
         if(productoDto.tipoProducto() == null || productoDto.tipoProducto().equals(""))
             mensaje += "El tipo de producto es inválido \n" ;
         if(mensaje.equals("")){
@@ -223,6 +237,10 @@ public class ProductoViewController {
             return false;
         }
 
+    }
+
+    public void mostrarAnunciantes(){
+        cmbAnunciante.setItems(listaAnunciantesDto);
     }
 
     /**
@@ -238,6 +256,9 @@ public class ProductoViewController {
     private void intiView() {
         initDataBinding();
         obtenerProductos();
+        mostrarTipoProducto();
+        mostrarAnunciantes();
+        getListaAnunciantes();
         tableProductos.getItems().clear();
         tableProductos.setItems(listaProductosDto);
         listenerSelection();
@@ -246,10 +267,6 @@ public class ProductoViewController {
         colCodigoUnico.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().codigoUnico()));
         colNombreProducto.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombreProducto()));
         colAnunciante.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombreAnunciante()));
-        colValorInicial.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().valorInicial())));
-        colDescripcion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().descripcion()));
-        colFechaPublicacion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().fechaPublicacion()));
-        colFechaFinPublicacion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().fechaFinPublicacion()));
         colTipoProducto.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().tipoProducto())));
 
     }
@@ -279,12 +296,8 @@ public class ProductoViewController {
         if(empleadoSeleccionado != null){
             txfCodigoUnico.setText(productoSeleccionado.codigoUnico());
             txfNombreProducto.setText(productoSeleccionado.nombreProducto());
-            txfAnunciante.setText(productoSeleccionado.nombreAnunciante());
-            txaDescripcion.setText(productoSeleccionado.descripcion());
-            txfValorInicial.setText(String.valueOf(productoSeleccionado.valorInicial()));
-            txfFechaPublicacion.setText(productoSeleccionado.fechaPublicacion());
-            txfFechaFinPublicacion.setText(String.valueOf(productoSeleccionado.fechaFinPublicacion()));
-            txfTipoProducto.setText(productoSeleccionado.tipoProducto());
+            cmbAnunciante.setValue(productoSeleccionado.getAnunciante());
+            cmbTipoProducto.setValue(productoSeleccionado.tipoProducto());
         }
     }
 

@@ -15,7 +15,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-12T13:28:33-0500",
+    date = "2023-11-18T17:46:35-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
@@ -39,12 +39,7 @@ public class SubastaMapperImpl implements SubastaMapper {
         foto = producto.getFoto();
         nombreAnunciante = producto.getNombreAnunciante();
 
-        String descripcion = null;
-        String fechaPublicacion = null;
-        String fechaFinPublicacion = null;
-        Double valorInicial = null;
-
-        ProductoDTO productoDTO = new ProductoDTO( codigoUnico, nombreProducto, descripcion, tipoProducto, foto, nombreAnunciante, fechaPublicacion, fechaFinPublicacion, valorInicial );
+        ProductoDTO productoDTO = new ProductoDTO( codigoUnico, nombreProducto, tipoProducto, foto, nombreAnunciante );
 
         return productoDTO;
     }
