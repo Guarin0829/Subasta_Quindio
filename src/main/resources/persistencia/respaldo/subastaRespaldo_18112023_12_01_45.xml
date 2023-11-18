@@ -81,19 +81,19 @@
    <void method="add">
     <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
      <void property="codigoUnico">
-      <string>001</string>
+      <string>1</string>
      </void>
      <void property="foto">
       <string></string>
      </void>
      <void property="nombreAnunciante">
-      <string>Jorge</string>
+      <string>u</string>
      </void>
      <void property="nombreProducto">
-      <string>Calentador</string>
+      <string>a</string>
      </void>
      <void property="tipoProducto">
-      <string>Hogar</string>
+      <string>hogar</string>
      </void>
     </object>
    </void>
