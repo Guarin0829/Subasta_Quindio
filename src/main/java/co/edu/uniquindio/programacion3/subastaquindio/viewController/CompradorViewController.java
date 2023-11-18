@@ -165,19 +165,27 @@ public class CompradorViewController {
         CompradorDto compradorDto = construirCompradorDto();
 
         if(datosValidos(compradorDto)){
-            if(compradorControllerService.agregarComprador(compradorDto)){
-                listaCompradores.add(compradorDto);
-                mostrarMensaje("Notificación comprador", "Comprador creado", "El comprador se ha creado con éxito", Alert.AlertType.INFORMATION);
-                registrarAcciones("Comprador creado",1, "Creación de un comprador, acción realizada por " + usuarioLogeado );
-                limpiarCamposAnunciantes();
+            if(validarEdadComprador(compradorDto)){
+                if(compradorControllerService.agregarComprador(compradorDto)){
+                    listaCompradores.add(compradorDto);
+                    mostrarMensaje("Notificación comprador", "Comprador creado", "El comprador se ha creado con éxito", Alert.AlertType.INFORMATION);
+                    registrarAcciones("Comprador creado",1, "Creación de un comprador, acción realizada por " + usuarioLogeado );
+                    limpiarCamposAnunciantes();
 
-            }else{
-                mostrarMensaje("Notificación comprador", "Comprador no creado", "El comprador no se ha creado", Alert.AlertType.ERROR);
+                }else{
+                    mostrarMensaje("Notificación comprador", "Comprador no creado", "El comprador no se ha creado", Alert.AlertType.ERROR);
+                }
+            }else {
+                mostrarMensaje("Notificación comprador", "Comprador no creado", "El comprador es menor de edad", Alert.AlertType.ERROR);
             }
         }else{
             mostrarMensaje("Notificación comprador", "Comprador no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
         }
 
+    }
+
+    private boolean validarEdadComprador(CompradorDto compradorDto) {
+        return compradorControllerService.validarEdadComprador(compradorDto);
     }
 
     private void eliminarAnunciante() {
