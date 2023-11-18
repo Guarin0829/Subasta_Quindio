@@ -15,6 +15,7 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
     private ArrayList<Usuario> listaUsuarios = new ArrayList<>();
     private ArrayList<Anunciante> listaAnunciantes = new ArrayList<>();
     private ArrayList<Comprador> listaCompradores = new ArrayList<>();
+    private ArrayList<Anuncio> listaAnuncios = new ArrayList<>();
 
     public SubastaQuindio() {
 
@@ -377,6 +378,101 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
         // TODO Auto-generated method stub
         return getListaProductos();
     }
+
+    @Override
+    public Anuncio obtenerAnuncio(String cedula) {
+        Anuncio anuncioEncontrado = null;
+        for (Anuncio anuncio : getListaAnuncios()) {
+            if(anuncio.getCodigo().equalsIgnoreCase(cedula)){
+                anuncioEncontrado = anuncio;
+                break;
+            }
+        }
+        return anuncioEncontrado;
+    }
+
+    @Override
+    public String obtenerEstadoAnuncio(String codigo) {
+        String estado = "";
+        for (Anuncio anuncio : getListaAnuncios()) {
+            if(anuncio.getCodigo().equalsIgnoreCase(codigo)){
+                estado = anuncio.getEstado();
+                break;
+            }
+        }
+        return estado;
+    }
+    @Override
+    public boolean anuncioExiste(String codigo) {
+        boolean anuncioEncontrado = false;
+        for (Anuncio anuncio : getListaAnuncios()) {
+            if(anuncio.getCodigo().equalsIgnoreCase(codigo)){
+                anuncioEncontrado = true;
+                break;
+            }
+        }
+        return anuncioEncontrado;
+    }
+
+    @Override
+    public boolean verificarAnuncioExistente(String codigo) throws AnuncioException {
+        if(anuncioExiste(codigo)){
+            throw new AnuncioException("El anuncio con cédula: "+codigo+" ya existe");
+        }else{
+            return false;
+        }
+    }
+
+    public void agregarAnuncio(Anuncio nuevoAnuncio) throws AnuncioException{
+        getListaAnuncios().add(nuevoAnuncio);
+    }
+
+    @Override
+    public boolean actualizarAnuncio(String codigo, Anuncio anuncio) throws AnuncioException {
+        Anuncio anuncioActual = obtenerAnuncio(codigo);
+        if(anuncioActual == null)
+            throw new AnuncioException("El anuncio a actualizar no existe");
+        else{
+            anuncioActual.setCodigo(anuncio.getCodigo());
+            anuncioActual.setProducto(anuncio.getProducto());
+            anuncioActual.setAnunciante(anuncio.getAnunciante());
+            anuncioActual.setFechaPublicacion(anuncio.getFechaPublicacion());
+            anuncioActual.setFechaFinPublicacion(anuncio.getFechaFinPublicacion());
+            anuncioActual.setValorInicial(anuncio.getValorInicial());
+            anuncioActual.setDescripcion(anuncio.getDescripcion());
+            anuncioActual.setEstado(anuncio.getEstado());
+            return true;
+        }
+    }
+
+    @Override
+    public Boolean eliminarAnuncio(String cedula) throws AnuncioException {
+        Anuncio anuncio = null;
+        boolean flagExiste = false;
+        anuncio = obtenerAnuncio(cedula);
+        if(anuncio == null)
+            throw new AnuncioException("El anuncio a eliminar no existe");
+        else{
+            getListaAnuncios().remove(anuncio);
+            flagExiste = true;
+        }
+        return flagExiste;
+    }
+
+    public ArrayList<Anuncio> getListaAnuncios() {
+        return listaAnuncios;
+    }
+
+    public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
+        this.listaAnuncios = listaAnuncios;
+    }
+
+
+
+
+
+
+
 
 
 }

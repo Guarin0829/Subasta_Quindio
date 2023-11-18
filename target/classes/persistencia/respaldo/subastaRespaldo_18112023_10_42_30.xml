@@ -31,36 +31,6 @@
     </object>
    </void>
   </void>
-  <void property="listaCompradores">
-   <void method="add">
-    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Comprador">
-     <void property="apellido">
-      <string>A</string>
-     </void>
-     <void property="cedula">
-      <string>56</string>
-     </void>
-     <void property="correo">
-      <string>bt@8</string>
-     </void>
-     <void property="direccion">
-      <string>YGG</string>
-     </void>
-     <void property="fechaNacimiento">
-      <string>2003-01-01</string>
-     </void>
-     <void property="nombre">
-      <string>A</string>
-     </void>
-     <void property="telefono">
-      <string>788</string>
-     </void>
-     <void property="usuarioAsociado">
-      <string>Matias rol -- Comprador</string>
-     </void>
-    </object>
-   </void>
-  </void>
   <void property="listaProductos">
    <void method="add">
     <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">

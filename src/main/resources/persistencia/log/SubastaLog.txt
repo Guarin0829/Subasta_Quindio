@@ -176,3 +176,7 @@ nov. 18, 2023 10:42:39 A. M. co.edu.uniquindio.programacion3.subastaquindio.uti
 INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
 nov. 18, 2023 10:43:31 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
 INFO: Creación de un comprador, acción realizada por Matias,Comprador creado,2023-11-18
+nov. 18, 2023 11:31:48 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 11:32:00 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
