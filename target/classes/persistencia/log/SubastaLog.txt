@@ -132,3 +132,41 @@ nov. 12, 2023 9:41:51 A. M. co.edu.uniquindio.programacion3.subastaquindio.util
 INFORMACIÓN: Inicio sesión,Inicio de sesión incorrecto,2023-11-12
 nov. 12, 2023 9:42:03 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: Inicio sesión,Inicio de sesión incorrecto,2023-11-12
+nov. 12, 2023 1:28:50 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-12
+nov. 12, 2023 1:29:12 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-12
+nov. 18, 2023 9:56:30 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 9:59:36 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:07:10 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 10:07:18 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:08:03 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un anunciante, acción realizada por Matias,Anunciante creado,2023-11-18
+nov. 18, 2023 10:10:41 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 10:10:49 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:15:47 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 10:15:57 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:19:59 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 10:20:07 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:24:28 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un comprador, acción realizada por Matias,Comprador creado,2023-11-18
+nov. 18, 2023 10:24:43 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-18
+nov. 18, 2023 10:24:53 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Matias,2023-11-18
+nov. 18, 2023 10:26:02 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un comprador, acción realizada por Matias,Comprador creado,2023-11-18
+nov. 18, 2023 10:26:08 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Comprador eliminado, acción realizada por Matias,Comprador eliminado,2023-11-18
+nov. 18, 2023 10:26:16 A. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Comprador eliminado, acción realizada por Matias,Comprador eliminado,2023-11-18

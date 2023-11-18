@@ -43,4 +43,8 @@ public interface IModelFactoryService {
     boolean actualizarComprador(String cedulaActual, CompradorDto compradorDto);
 
     boolean inicioSesion(String usuario, String password) throws Exception;
+
+    boolean validarEdadAnunciante(AnuncianteDto anuncianteDto);
+
+    boolean validarEdadComprador(CompradorDto compradorDto);
 }
