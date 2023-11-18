@@ -78,6 +78,25 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
+     <void property="codigoUnico">
+      <string>1</string>
+     </void>
+     <void property="foto">
+      <string></string>
+     </void>
+     <void property="nombreAnunciante">
+      <string>u</string>
+     </void>
+     <void property="nombreProducto">
+      <string>a</string>
+     </void>
+     <void property="tipoProducto">
+      <string>hogar</string>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="listaUsuarios">
    <void method="add">
