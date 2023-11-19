@@ -1,9 +1,0 @@
-src/main/resources/persistencia/log/SubastaLog.txt
-src/main/resources/persistencia/model.xml
-target/classes/persistencia/log/SubastaLog.txt
-target/classes/persistencia/model.xml
-
-src/main/resources/persistencia/respaldo/subastaRespaldo_18112023_11_38_46.xml
-src/main/resources/persistencia/respaldo/subastaRespaldo_18112023_11_44_38.xml
-target/classes/persistencia/respaldo/subastaRespaldo_18112023_10_42_30.xml
-target/classes/persistencia/respaldo/subastaRespaldo_18112023_11_38_46.xml
