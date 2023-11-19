@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Subasta_Quindio ###
+src/main/resources/persistencia/respaldo/
+src/main/resources/persistencia/log/

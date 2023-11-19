@@ -2,10 +2,12 @@ package co.edu.uniquindio.programacion3.subastaquindio.mapping.mappers;
 
 import co.edu.uniquindio.programacion3.subastaquindio.enumm.Rol;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncianteDto;
+import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncioDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.CompradorDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ProductoDTO;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante;
+import co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Comprador;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Producto;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Usuario;
@@ -15,7 +17,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-18T17:46:35-0500",
+    date = "2023-11-19T14:53:12-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
@@ -248,6 +250,72 @@ public class SubastaMapperImpl implements SubastaMapper {
         List<CompradorDto> list = new ArrayList<CompradorDto>( listaCompradores.size() );
         for ( Comprador comprador : listaCompradores ) {
             list.add( compradorToCompradorDto( comprador ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public AnuncioDto anuncioToAnuncioDto(Anuncio anuncio) {
+        if ( anuncio == null ) {
+            return null;
+        }
+
+        String codigo = null;
+        String producto = null;
+        String anunciante = null;
+        String fechaPublicacion = null;
+        String fechaFinPublicacion = null;
+        double valorInicial = 0.0d;
+        String descripcion = null;
+        String foto = null;
+        String estado = null;
+
+        codigo = anuncio.getCodigo();
+        producto = anuncio.getProducto();
+        anunciante = anuncio.getAnunciante();
+        fechaPublicacion = anuncio.getFechaPublicacion();
+        fechaFinPublicacion = anuncio.getFechaFinPublicacion();
+        valorInicial = anuncio.getValorInicial();
+        descripcion = anuncio.getDescripcion();
+        foto = anuncio.getFoto();
+        estado = anuncio.getEstado();
+
+        AnuncioDto anuncioDto = new AnuncioDto( codigo, producto, anunciante, fechaPublicacion, fechaFinPublicacion, valorInicial, descripcion, foto, estado );
+
+        return anuncioDto;
+    }
+
+    @Override
+    public Anuncio anuncioDtoToAnuncio(AnuncioDto anuncioDto) {
+        if ( anuncioDto == null ) {
+            return null;
+        }
+
+        Anuncio anuncio = new Anuncio();
+
+        anuncio.setCodigo( anuncioDto.codigo() );
+        anuncio.setProducto( anuncioDto.producto() );
+        anuncio.setAnunciante( anuncioDto.anunciante() );
+        anuncio.setFechaPublicacion( anuncioDto.fechaPublicacion() );
+        anuncio.setFechaFinPublicacion( anuncioDto.fechaFinPublicacion() );
+        anuncio.setValorInicial( anuncioDto.valorInicial() );
+        anuncio.setDescripcion( anuncioDto.descripcion() );
+        anuncio.setFoto( anuncioDto.foto() );
+        anuncio.setEstado( anuncioDto.estado() );
+
+        return anuncio;
+    }
+
+    @Override
+    public List<AnuncioDto> getAnuncioDto(List<Anuncio> listaAnuncios) {
+        if ( listaAnuncios == null ) {
+            return null;
+        }
+
+        List<AnuncioDto> list = new ArrayList<AnuncioDto>( listaAnuncios.size() );
+        for ( Anuncio anuncio : listaAnuncios ) {
+            list.add( anuncioToAnuncioDto( anuncio ) );
         }
 
         return list;

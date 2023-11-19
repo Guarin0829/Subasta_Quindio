@@ -1,13 +1,7 @@
 package co.edu.uniquindio.programacion3.subastaquindio.model.service;
 
-import co.edu.uniquindio.programacion3.subastaquindio.exceptions.AnuncianteException;
-import co.edu.uniquindio.programacion3.subastaquindio.exceptions.CompradorException;
-import co.edu.uniquindio.programacion3.subastaquindio.exceptions.ProductoException;
-import co.edu.uniquindio.programacion3.subastaquindio.exceptions.UsuarioException;
-import co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante;
-import co.edu.uniquindio.programacion3.subastaquindio.model.Comprador;
-import co.edu.uniquindio.programacion3.subastaquindio.model.Producto;
-import co.edu.uniquindio.programacion3.subastaquindio.model.Usuario;
+import co.edu.uniquindio.programacion3.subastaquindio.exceptions.*;
+import co.edu.uniquindio.programacion3.subastaquindio.model.*;
 
 import java.util.ArrayList;
 
@@ -52,4 +46,17 @@ public interface ISubastaQuindioService {
     Comprador obtenerComprador(String cedula);
 
     ArrayList<Producto> obtenerProductos();
+
+
+    Anuncio obtenerAnuncio(String cedula);
+
+    String obtenerEstadoAnuncio(String codigo);
+
+    boolean anuncioExiste(String codigo);
+
+    boolean verificarAnuncioExistente(String codigo) throws AnuncioException;
+
+    boolean actualizarAnuncio(String codigo, Anuncio anuncio) throws AnuncioException;
+
+    Boolean eliminarAnuncio(String cedula) throws AnuncioException;
 }
