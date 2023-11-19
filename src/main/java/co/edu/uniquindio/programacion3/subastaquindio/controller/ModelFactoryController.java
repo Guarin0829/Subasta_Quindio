@@ -2,10 +2,7 @@ package co.edu.uniquindio.programacion3.subastaquindio.controller;
 
 import co.edu.uniquindio.programacion3.subastaquindio.controller.service.IModelFactoryService;
 import co.edu.uniquindio.programacion3.subastaquindio.exceptions.*;
-import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncianteDto;
-import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.CompradorDto;
-import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ProductoDTO;
-import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.*;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.mappers.SubastaMapper;
 import co.edu.uniquindio.programacion3.subastaquindio.model.*;
 import co.edu.uniquindio.programacion3.subastaquindio.utils.Persistencia;
@@ -330,6 +327,50 @@ public class ModelFactoryController implements IModelFactoryService {
 
     public void registrarAccionesSistema(String mensaje, int nivel, String accion) {
         Persistencia.guardaRegistroLog(mensaje, nivel, accion);
+    }
+
+    @Override
+    public List<AnuncioDto> obtenerAnuncio() {
+        return null;
+    }
+
+    @Override
+    public boolean eliminarAnuncio(String codigo) {
+        return false;
+    }
+
+    @Override
+    public boolean actualizarAnuncio(String codigoActual, AnuncioDto anuncioDto) {
+        return false;
+    }
+
+    @Override
+    public List<AnuncioDto> obtenerAnuncios() {
+        return  mapper.getAnuncioDto(subasta.getListaAnuncios());
+    }
+
+    @Override
+    public String obtenerEstadoAnuncio(String codigo) {
+        return getSubasta().obtenerEstadoAnuncio(codigo);
+    }
+
+    @Override
+    public boolean agregarAnuncio(AnuncioDto anuncioDto) {
+        try{
+            if(!subasta.verificarAnuncioExistente(anuncioDto.codigo())) {
+                Anuncio anuncio = mapper.anuncioDtoToAnuncio(anuncioDto);
+                getSubasta().agregarAnuncio(anuncio);
+                guardarResourceXML();
+            }
+            return true;
+        }catch (AnuncioException e){
+            e.getMessage();
+            return false;
+        }
+
+
+
+
     }
 
 
