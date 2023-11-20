@@ -7,6 +7,8 @@ import co.edu.uniquindio.programacion3.subastaquindio.mapping.mappers.SubastaMap
 import co.edu.uniquindio.programacion3.subastaquindio.model.*;
 import co.edu.uniquindio.programacion3.subastaquindio.utils.Persistencia;
 import co.edu.uniquindio.programacion3.subastaquindio.utils.SubastaUtils;
+import co.edu.uniquindio.programacion3.subastaquindio.viewController.PujaViewController;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.List;
 public class ModelFactoryController implements IModelFactoryService {
 
     SubastaQuindio subasta;
+
+    PujaViewController pujaView = new PujaViewController();
     SubastaMapper mapper = SubastaMapper.INSTANCE;
 
     //------------------------------  Singleton ------------------------------------------------
@@ -98,6 +102,22 @@ public class ModelFactoryController implements IModelFactoryService {
     @Override
     public List<ProductoDTO> obtenerProductos() {
         return  mapper.getProductoDto(subasta.getListaProductos());
+    }
+
+    @Override
+    public String obtenerProducto(String nombre) {
+        Producto producto = getSubasta().obtenerProducto(nombre);
+
+        if (producto != null) {
+            ProductoDTO productoDto = mapper.productoToProductoDto(producto);
+            if (productoDto != null) {
+                return productoDto.foto();
+            } else {
+                return "";
+            }
+        } else {
+            return "";
+        }
     }
 
     @Override
@@ -331,7 +351,7 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public List<AnuncioDto> obtenerAnuncio() {
-        return null;
+        return  mapper.getAnuncioDto(subasta.getListaAnuncios());
     }
 
     @Override
@@ -367,10 +387,69 @@ public class ModelFactoryController implements IModelFactoryService {
             e.getMessage();
             return false;
         }
+    }
 
+    public boolean validarValorPuja(String codigo, Double puja){
+        return getSubasta().validarValorPuja(codigo, puja);
+    }
 
+    @Override
+    public List<PujaDto> obtenerPujas() {
+        return  mapper.getPujaDto(subasta.getListaPujas());
+    }
 
+    @Override
+    public boolean actualizarPuja(String codigo, PujaDto pujaDto) {
+        try {
+            Puja puja = mapper.pujaDtoToPuja(pujaDto);
+            getSubasta().actualizarPuja(codigo, puja);
+            guardarResourceXML();
+            return true;
+        } catch (PujaException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
+    @Override
+    public boolean agregarPuja(PujaDto pujaDto) {
+        try{
+            Puja puja = mapper.pujaDtoToPuja(pujaDto);
+            getSubasta().agregarPuja(puja);
+            guardarResourceXML();
+            return true;
+        }catch (PujaException e){
+            e.getMessage();
+            return false;
+        }
+    }
+
+    @Override
+    public CompradorDto obtenerComprador(String nombre) {
+        return  mapper.compradorToCompradorDto(getSubasta().obtenerCompradorPorUsuario(nombre));
+    }
+
+    public boolean actualizarTiempoRestante(String codigo) {
+        AnuncioDto anuncioDto;
+        Anuncio anuncio = obtenerAnuncio(codigo);
+
+        if (anuncio != null) {
+            anuncioDto = mapper.anuncioToAnuncioDto(anuncio);
+            return getSubasta().verificarHoraFin(anuncioDto.fechaFinPublicacion());
+        } else {
+            pujaView.mostrarMensaje("Notificación puja", "Puja no creada", "No se pudo encontrar la fecha fin del anuncio", Alert.AlertType.ERROR);
+
+            return false;
+        }
+    }
+
+    @Override
+    public Anuncio obtenerAnuncio(String codigo) {
+        Anuncio anuncio = null;
+
+        anuncio = getSubasta().obtenerAnuncio(codigo);
+
+        return anuncio;
     }
 
 

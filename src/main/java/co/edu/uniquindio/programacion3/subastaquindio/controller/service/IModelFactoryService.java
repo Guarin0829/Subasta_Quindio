@@ -1,6 +1,7 @@
 package co.edu.uniquindio.programacion3.subastaquindio.controller.service;
 
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.*;
+import co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio;
 
 import java.util.List;
 
@@ -8,6 +9,8 @@ public interface IModelFactoryService {
 
 
     List<ProductoDTO> obtenerProductos();
+
+    String obtenerProducto(String nombre);
 
     List<UsuarioDto> obtenerUsuarios();
 
@@ -56,4 +59,15 @@ public interface IModelFactoryService {
     boolean eliminarAnuncio(String codigo);
 
     List<AnuncioDto> obtenerAnuncios();
+
+    List<PujaDto> obtenerPujas();
+
+    boolean actualizarPuja(String codigo, PujaDto pujaDto);
+
+    boolean agregarPuja(PujaDto pujaDto);
+
+
+    CompradorDto obtenerComprador(String nombre);
+
+    Anuncio obtenerAnuncio(String codigo);
 }

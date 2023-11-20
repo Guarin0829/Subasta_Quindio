@@ -2,9 +2,12 @@ package co.edu.uniquindio.programacion3.subastaquindio.model;
 
 import co.edu.uniquindio.programacion3.subastaquindio.exceptions.*;
 import co.edu.uniquindio.programacion3.subastaquindio.model.service.ISubastaQuindioService;
+import co.edu.uniquindio.programacion3.subastaquindio.viewController.PujaViewController;
+import javafx.scene.control.Alert;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Period;
 import java.util.ArrayList;
 
@@ -17,6 +20,10 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
     private ArrayList<Comprador> listaCompradores = new ArrayList<>();
 
     private ArrayList<Anuncio> listaAnuncios = new ArrayList<>();
+
+    private PujaViewController pujaView = new PujaViewController();
+
+    private ArrayList<Puja> listaPujas = new ArrayList<>();
 
     public SubastaQuindio() {
 
@@ -466,6 +473,91 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
 
     public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
         this.listaAnuncios = listaAnuncios;
+    }
+
+    public ArrayList<Puja> getListaPujas() {
+        return listaPujas;
+    }
+
+    public void setListaPujas(ArrayList<Puja> listaPujas) {
+        this.listaPujas = listaPujas;
+    }
+
+    public boolean validarValorPuja(String codigoAnuncio, Double puja) {
+        boolean respuesta = false;
+        if(!valorMenorPujado(codigoAnuncio, puja)){
+            return respuesta;
+        }else {
+            respuesta = true;
+        }
+        return respuesta;
+    }
+
+    public boolean valorMenorPujado(String codigoAnuncio, Double puja) {
+        boolean respuesta = false;
+        Anuncio anuncio = obtenerAnuncio(codigoAnuncio);
+        if(anuncio != null){
+            if (anuncio.getValorInicial() < puja) {
+                respuesta = true;
+            }
+        }else{
+            pujaView.mostrarMensaje("Notificación puja", "Puja no creada", "No se pudo encontrar el valor inicial del anuncio", Alert.AlertType.ERROR);
+
+        }
+
+        return respuesta;
+    }
+
+    @Override
+    public boolean actualizarPuja(String codigo, Puja puja) throws PujaException {
+        Puja pujaActual = obtenerPuja(codigo);
+        if(pujaActual == null)
+            throw new PujaException("No se pudo actualizar la puja");
+        else{
+            pujaActual.setCodigo(puja.getCodigo());
+            pujaActual.setProducto(puja.getProducto());
+            pujaActual.setAnuncio(puja.getAnuncio());
+            pujaActual.setComprador(puja.getComprador());
+            pujaActual.setOferta(puja.getOferta());
+            pujaActual.setEstadoAnuncio(puja.getEstadoAnuncio());
+            return true;
+        }
+    }
+
+    public void agregarPuja(Puja nuevaPuja) throws PujaException{
+        getListaPujas().add(nuevaPuja);
+    }
+
+    @Override
+    public Puja obtenerPuja(String codigo) {
+        Puja pujaEncontrada = null;
+        for (Puja puja : getListaPujas()) {
+            if(puja.getCodigo().equalsIgnoreCase(codigo)){
+                pujaEncontrada = puja;
+                break;
+            }
+        }
+        return pujaEncontrada;
+    }
+
+    public boolean verificarHoraFin(String hora) {
+
+        LocalTime horaActual = LocalTime.now();
+        LocalTime horaFin = LocalTime.parse(hora);
+
+        return !horaActual.isAfter(horaFin);
+    }
+
+    @Override
+    public Comprador obtenerCompradorPorUsuario(String nombreUsuario) {
+        Comprador compradorEncontrado = null;
+        for (Comprador comprador : getListaCompradores()) {
+            if(comprador.getUsuarioAsociado().contains(nombreUsuario)){
+                compradorEncontrado = comprador;
+                break;
+            }
+        }
+        return compradorEncontrado;
     }
 
 

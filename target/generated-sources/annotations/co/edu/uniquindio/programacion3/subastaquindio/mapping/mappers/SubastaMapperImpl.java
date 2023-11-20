@@ -5,11 +5,13 @@ import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncianteDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncioDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.CompradorDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ProductoDTO;
+import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.PujaDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Comprador;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Producto;
+import co.edu.uniquindio.programacion3.subastaquindio.model.Puja;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Usuario;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-19T14:53:12-0500",
+    date = "2023-11-19T19:23:22-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
@@ -316,6 +318,63 @@ public class SubastaMapperImpl implements SubastaMapper {
         List<AnuncioDto> list = new ArrayList<AnuncioDto>( listaAnuncios.size() );
         for ( Anuncio anuncio : listaAnuncios ) {
             list.add( anuncioToAnuncioDto( anuncio ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public PujaDto pujaToPujaDto(Puja puja) {
+        if ( puja == null ) {
+            return null;
+        }
+
+        String codigo = null;
+        String producto = null;
+        String anuncio = null;
+        String comprador = null;
+        double oferta = 0.0d;
+        String estadoAnuncio = null;
+
+        codigo = puja.getCodigo();
+        producto = puja.getProducto();
+        anuncio = puja.getAnuncio();
+        comprador = puja.getComprador();
+        oferta = puja.getOferta();
+        estadoAnuncio = puja.getEstadoAnuncio();
+
+        PujaDto pujaDto = new PujaDto( codigo, producto, anuncio, comprador, oferta, estadoAnuncio );
+
+        return pujaDto;
+    }
+
+    @Override
+    public Puja pujaDtoToPuja(PujaDto pujaDto) {
+        if ( pujaDto == null ) {
+            return null;
+        }
+
+        Puja puja = new Puja();
+
+        puja.setCodigo( pujaDto.codigo() );
+        puja.setComprador( pujaDto.comprador() );
+        puja.setOferta( pujaDto.oferta() );
+        puja.setProducto( pujaDto.producto() );
+        puja.setAnuncio( pujaDto.anuncio() );
+        puja.setEstadoAnuncio( pujaDto.estadoAnuncio() );
+
+        return puja;
+    }
+
+    @Override
+    public List<PujaDto> getPujaDto(List<Puja> listaPujas) {
+        if ( listaPujas == null ) {
+            return null;
+        }
+
+        List<PujaDto> list = new ArrayList<PujaDto>( listaPujas.size() );
+        for ( Puja puja : listaPujas ) {
+            list.add( pujaToPujaDto( puja ) );
         }
 
         return list;
