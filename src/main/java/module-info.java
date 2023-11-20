@@ -4,6 +4,7 @@ module co.edu.uniquindio.programacion3.subastaquindio {
     requires org.mapstruct;
     requires java.desktop;
     requires java.logging;
+    requires com.rabbitmq.client;
 
 
     opens co.edu.uniquindio.programacion3.subastaquindio to javafx.fxml;

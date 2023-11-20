@@ -3,12 +3,14 @@ package co.edu.uniquindio.programacion3.subastaquindio.mapping.mappers;
 import co.edu.uniquindio.programacion3.subastaquindio.enumm.Rol;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncianteDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.AnuncioDto;
+import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ChatDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.CompradorDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.ProductoDTO;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.PujaDto;
 import co.edu.uniquindio.programacion3.subastaquindio.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio;
+import co.edu.uniquindio.programacion3.subastaquindio.model.Chat;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Comprador;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Producto;
 import co.edu.uniquindio.programacion3.subastaquindio.model.Puja;
@@ -19,7 +21,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-19T19:23:22-0500",
+    date = "2023-11-19T20:33:08-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
@@ -375,6 +377,51 @@ public class SubastaMapperImpl implements SubastaMapper {
         List<PujaDto> list = new ArrayList<PujaDto>( listaPujas.size() );
         for ( Puja puja : listaPujas ) {
             list.add( pujaToPujaDto( puja ) );
+        }
+
+        return list;
+    }
+
+    @Override
+    public ChatDto chatToChatDto(Chat chat) {
+        if ( chat == null ) {
+            return null;
+        }
+
+        String anunciante = null;
+        String miChat = null;
+
+        anunciante = chat.getAnunciante();
+        miChat = chat.getMiChat();
+
+        ChatDto chatDto = new ChatDto( anunciante, miChat );
+
+        return chatDto;
+    }
+
+    @Override
+    public Chat chatDtoToChat(ChatDto chatDto) {
+        if ( chatDto == null ) {
+            return null;
+        }
+
+        Chat chat = new Chat();
+
+        chat.setAnunciante( chatDto.anunciante() );
+        chat.setMiChat( chatDto.miChat() );
+
+        return chat;
+    }
+
+    @Override
+    public List<ChatDto> getChatDto(List<Chat> listaChats) {
+        if ( listaChats == null ) {
+            return null;
+        }
+
+        List<ChatDto> list = new ArrayList<ChatDto>( listaChats.size() );
+        for ( Chat chat : listaChats ) {
+            list.add( chatToChatDto( chat ) );
         }
 
         return list;

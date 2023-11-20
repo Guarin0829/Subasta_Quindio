@@ -13,12 +13,14 @@ co\edu\uniquindio\programacion3\subastaquindio\utils\AnuncioUtil.class
 co\edu\uniquindio\programacion3\subastaquindio\viewController\ProductoViewController.class
 co\edu\uniquindio\programacion3\subastaquindio\model\service\IProductoService.class
 co\edu\uniquindio\programacion3\subastaquindio\exceptions\AnuncioException.class
+co\edu\uniquindio\programacion3\subastaquindio\model\Chat.class
 co\edu\uniquindio\programacion3\subastaquindio\Main.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Anunciante.class
 co\edu\uniquindio\programacion3\subastaquindio\model\SubastaApplication.class
 co\edu\uniquindio\programacion3\subastaquindio\exceptions\UsuarioException.class
 module-info.class
 co\edu\uniquindio\programacion3\subastaquindio\utils\UsuarioUtil.class
+co\edu\uniquindio\programacion3\subastaquindio\controller\ChatController.class
 co\edu\uniquindio\programacion3\subastaquindio\enumm\TipoProducto.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\AnuncioController.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\ModelFactoryController$SingletonHolder.class
@@ -33,6 +35,7 @@ co\edu\uniquindio\programacion3\subastaquindio\viewController\CompradorViewContr
 co\edu\uniquindio\programacion3\subastaquindio\mapping\dto\PujaDto.class
 co\edu\uniquindio\programacion3\subastaquindio\enumm\Rol.class
 co\edu\uniquindio\programacion3\subastaquindio\utils\CompradorUtil.class
+co\edu\uniquindio\programacion3\subastaquindio\utils\Constantes.class
 co\edu\uniquindio\programacion3\subastaquindio\mapping\mappers\SubastaMapperImpl.class
 co\edu\uniquindio\programacion3\subastaquindio\mapping\dto\UsuarioDto.class
 co\edu\uniquindio\programacion3\subastaquindio\MainSubasta.class
@@ -52,10 +55,14 @@ co\edu\uniquindio\programacion3\subastaquindio\exceptions\PujaException.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Puja.class
 co\edu\uniquindio\programacion3\subastaquindio\exceptions\CompradorException.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\service\IModelFactoryService.class
+co\edu\uniquindio\programacion3\subastaquindio\exceptions\ChatException.class
+co\edu\uniquindio\programacion3\subastaquindio\viewController\ChatViewController.class
 co\edu\uniquindio\programacion3\subastaquindio\utils\PujaUtil.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\ModelFactoryController.class
 co\edu\uniquindio\programacion3\subastaquindio\mapping\mappers\SubastaMapper.class
 co\edu\uniquindio\programacion3\subastaquindio\utils\ArchivoUtil.class
+co\edu\uniquindio\programacion3\subastaquindio\config\RabbitFactory.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Comprador.class
 co\edu\uniquindio\programacion3\subastaquindio\viewController\InicioViewController.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\ProductoController.class
+co\edu\uniquindio\programacion3\subastaquindio\mapping\dto\ChatDto.class

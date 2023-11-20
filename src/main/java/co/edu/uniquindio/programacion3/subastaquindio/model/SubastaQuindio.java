@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class SubastaQuindio implements ISubastaQuindioService, Serializable {
 
+    private ArrayList<Chat> listaMensajes = new ArrayList<>();
+
     private static final long serialVersionUID = 1L;
     private ArrayList<Producto> listaProductos = new ArrayList<>();
     private ArrayList<Usuario> listaUsuarios = new ArrayList<>();
@@ -558,6 +560,20 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
             }
         }
         return compradorEncontrado;
+    }
+
+    public ArrayList<Chat> getListaMensajes() {
+        return listaMensajes;
+    }
+
+    public void setListaMensajes(ArrayList<Chat> listaMensajes) {
+        this.listaMensajes = listaMensajes;
+    }
+
+    public void iniciarChat(String texto) {
+        Chat chatAnunciantes = new Chat();
+        chatAnunciantes.setMiChat(texto);
+        getListaMensajes().add(chatAnunciantes);
     }
 
 

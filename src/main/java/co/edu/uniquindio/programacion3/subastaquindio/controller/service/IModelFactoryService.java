@@ -66,8 +66,14 @@ public interface IModelFactoryService {
 
     boolean agregarPuja(PujaDto pujaDto);
 
+    List<ChatDto> obtenerChats();
+
 
     CompradorDto obtenerComprador(String nombre);
 
     Anuncio obtenerAnuncio(String codigo);
+
+
+
+    void producirMensaje(String queue, String message);
 }
