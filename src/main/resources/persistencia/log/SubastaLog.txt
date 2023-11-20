@@ -28,3 +28,25 @@ nov. 19, 2023 3:13:33 P. M. co.edu.uniquindio.programacion3.subastaquindio.util
 INFO: Agregar empleado,Producto agregado,2023-11-19
 nov. 19, 2023 3:20:18 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
 INFO: Creación de un usuario, acción realizada por Matias,Anuncio creado,2023-11-19
+nov. 19, 2023 6:13:53 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 6:14:00 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-19
+nov. 19, 2023 7:12:20 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 7:13:29 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-19
+nov. 19, 2023 7:22:01 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 7:22:09 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-19
+nov. 19, 2023 7:22:24 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 7:22:31 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-19
+nov. 19, 2023 7:23:32 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 7:23:56 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-19
+nov. 19, 2023 7:24:05 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-19

@@ -59,4 +59,10 @@ public interface ISubastaQuindioService {
     boolean actualizarAnuncio(String codigo, Anuncio anuncio) throws AnuncioException;
 
     Boolean eliminarAnuncio(String cedula) throws AnuncioException;
+
+    boolean actualizarPuja(String codigo, Puja puja) throws PujaException;
+
+    Puja obtenerPuja(String codigo);
+
+    Comprador obtenerCompradorPorUsuario(String nombreUsuario);
 }
