@@ -83,6 +83,7 @@
             <TableColumn fx:id="colTipoProducto" prefWidth="227.0" text="Tipo Produccto" />
         </columns>
       </TableView>
-      <ImageView fx:id="imageViewFoto" fitHeight="132.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageViewFoto" fitHeight="132.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" onDragDetected="#seleccionarImagen" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnAgregarImagen" layoutX="40.0" layoutY="160.0" mnemonicParsing="false" onAction="#seleccionarImagen" text="Agregar Imagen" />
    </children>
 </AnchorPane>

@@ -82,3 +82,139 @@ nov. 21, 2023 4:05:59 P. M. co.edu.uniquindio.programacion3.subastaquindio.util
 INFO: inicioSesión,Inicio de sesión,2023-11-21
 nov. 21, 2023 4:06:07 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
 INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 4:17:51 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:17:59 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 4:18:47 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:18:55 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 4:24:10 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:24:18 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 4:26:48 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Anunciante eliminado, acción realizada por yovany,Anunciante eliminado,2023-11-21
+nov. 21, 2023 4:28:50 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un anunciante, acción realizada por yovany,Anunciante creado,2023-11-21
+nov. 21, 2023 4:33:29 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Comprador actualizado, acción realizada por yovany,Comprador actualizado,2023-11-21
+nov. 21, 2023 4:34:57 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Comprador actualizado, acción realizada por yovany,Comprador actualizado,2023-11-21
+nov. 21, 2023 4:36:35 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un comprador, acción realizada por yovany,Comprador creado,2023-11-21
+nov. 21, 2023 4:38:28 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:38:38 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 4:39:22 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Agregar empleado,Producto agregado,2023-11-21
+nov. 21, 2023 4:39:46 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Empleado Actualizado,Producto Actualizado,2023-11-21
+nov. 21, 2023 4:40:57 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:41:05 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 4:44:16 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Empleado Actualizado,Producto Actualizado,2023-11-21
+nov. 21, 2023 4:44:33 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:44:43 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 4:46:23 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un usuario, acción realizada por daniela,Anuncio creado,2023-11-21
+nov. 21, 2023 4:46:38 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:46:53 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 4:56:40 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:56:48 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: DANIELA,2023-11-21
+nov. 21, 2023 4:58:41 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 4:58:52 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Yovany,2023-11-21
+nov. 21, 2023 5:01:04 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Comprador actualizado, acción realizada por Yovany,Comprador actualizado,2023-11-21
+nov. 21, 2023 5:01:14 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:01:26 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-21
+nov. 21, 2023 5:03:25 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Actualizar anuncio,Anuncio no actualizado,2023-11-21
+nov. 21, 2023 5:03:37 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:03:48 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-21
+nov. 21, 2023 5:04:40 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Actualizar anuncio,Anuncio no actualizado,2023-11-21
+nov. 21, 2023 5:06:01 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:06:10 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-21
+nov. 21, 2023 5:07:19 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:07:26 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-21
+nov. 21, 2023 5:07:42 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Agregar puja,Puja agregado,2023-11-21
+nov. 21, 2023 5:10:58 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:11:11 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:13:48 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:13:57 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 5:15:31 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un usuario, acción realizada por yovany,Anuncio creado,2023-11-21
+nov. 21, 2023 5:16:10 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:16:18 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:17:15 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:17:25 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 5:20:32 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Creación de un comprador, acción realizada por yovany,Comprador creado,2023-11-21
+nov. 21, 2023 5:20:52 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:21:02 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 5:21:42 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:21:50 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:22:53 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:23:05 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: pablo,2023-11-21
+nov. 21, 2023 5:25:00 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:25:08 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:25:35 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:25:44 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:26:12 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:26:19 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:37:34 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:37:42 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: yovany,2023-11-21
+nov. 21, 2023 5:37:53 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:38:04 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: daniela,2023-11-21
+nov. 21, 2023 5:40:09 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: inicioSesión,Inicio de sesión,2023-11-21
+nov. 21, 2023 5:40:20 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Inicio Sesión,Inicio de sesión, usuario: Daniela,2023-11-21
+nov. 21, 2023 5:41:17 P. M. co.edu.uniquindio.programacion3.subastaquindio.utils.ArchivoUtil guardarRegistroLog
+INFO: Agregar puja,Puja agregado,2023-11-21

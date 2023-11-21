@@ -5,34 +5,6 @@
    <void method="add">
     <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante">
      <void property="apellido">
-      <string>b</string>
-     </void>
-     <void property="cedula">
-      <string>345</string>
-     </void>
-     <void property="correo">
-      <string>23</string>
-     </void>
-     <void property="direccion">
-      <string>g</string>
-     </void>
-     <void property="fechaNacimiento">
-      <string>1990-12-09</string>
-     </void>
-     <void property="nombre">
-      <string>a</string>
-     </void>
-     <void property="telefono">
-      <string>789</string>
-     </void>
-     <void property="usuarioAsociado">
-      <string>Matias rol -- Comprador</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante">
-     <void property="apellido">
       <string>Beltran</string>
      </void>
      <void property="cedula">
@@ -58,6 +30,40 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Anunciante">
+     <void property="apellido">
+      <string>Fierro Nigth</string>
+     </void>
+     <void property="cedula">
+      <string>9999</string>
+     </void>
+     <void property="contrasenia">
+      <string></string>
+     </void>
+     <void property="correo">
+      <string>martin@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>Vereda del Pandebono</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>1965-04-12</string>
+     </void>
+     <void property="nombre">
+      <string>Martin</string>
+     </void>
+     <void property="rol">
+      <string></string>
+     </void>
+     <void property="telefono">
+      <string>5555</string>
+     </void>
+     <void property="usuarioAsociado">
+      <string>Pablo rol -- Comprador</string>
+     </void>
+    </object>
+   </void>
   </void>
   <void property="listaAnuncios">
    <void method="add">
@@ -75,7 +81,7 @@
       <string>Publicado</string>
      </void>
      <void property="fechaFinPublicacion">
-      <string>2023-11-20</string>
+      <string>18:00:00</string>
      </void>
      <void property="fechaPublicacion">
       <string>2023-11-19</string>
@@ -83,8 +89,61 @@
      <void property="producto">
       <string>1243  Lavadora Haceb</string>
      </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio">
+     <void property="anunciante">
+      <string>1234 -- Yovany Beltran</string>
+     </void>
+     <void property="codigo">
+      <string>490</string>
+     </void>
+     <void property="descripcion">
+      <string>Carro en buen estado </string>
+     </void>
+     <void property="estado">
+      <string>Publicado</string>
+     </void>
+     <void property="fechaFinPublicacion">
+      <string>18:00:00</string>
+     </void>
+     <void property="fechaPublicacion">
+      <string>18:00:00</string>
+     </void>
+     <void property="producto">
+      <string>490  Carro</string>
+     </void>
      <void property="valorInicial">
-      <double>50.0</double>
+      <string>5000000</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Anuncio">
+     <void property="anunciante">
+      <string>1234 -- Yovany Beltran</string>
+     </void>
+     <void property="codigo">
+      <string>1</string>
+     </void>
+     <void property="descripcion">
+      <string>Nueva</string>
+     </void>
+     <void property="estado">
+      <string>Publicado</string>
+     </void>
+     <void property="fechaFinPublicacion">
+      <string>2023-11-21</string>
+     </void>
+     <void property="fechaPublicacion">
+      <string>12:00:00</string>
+     </void>
+     <void property="producto">
+      <string>001  Calentador</string>
+     </void>
+     <void property="valorInicial">
+      <string>45</string>
      </void>
     </object>
    </void>
@@ -93,28 +152,127 @@
    <void method="add">
     <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Comprador">
      <void property="apellido">
-      <string>A</string>
+      <string>del Barrio</string>
      </void>
      <void property="cedula">
-      <string>56</string>
+      <string>112345</string>
      </void>
      <void property="correo">
       <string>bt@8</string>
      </void>
      <void property="direccion">
-      <string>YGG</string>
+      <string>La fogata</string>
      </void>
      <void property="fechaNacimiento">
       <string>2003-01-01</string>
      </void>
      <void property="nombre">
-      <string>A</string>
+      <string>Maria</string>
      </void>
      <void property="telefono">
-      <string>788</string>
+      <string>6789</string>
      </void>
      <void property="usuarioAsociado">
-      <string>Matias rol -- Comprador</string>
+      <string>Jorge el Curioso rol -- Anunciante</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Comprador">
+     <void property="apellido">
+      <string>Infante</string>
+     </void>
+     <void property="cedula">
+      <string>87879898</string>
+     </void>
+     <void property="contrasenia">
+      <string></string>
+     </void>
+     <void property="correo">
+      <string>pedro@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>Kílometro 6 vía a San Paleste</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>1998-07-10</string>
+     </void>
+     <void property="nombre">
+      <string>Pedro</string>
+     </void>
+     <void property="rol">
+      <string></string>
+     </void>
+     <void property="telefono">
+      <string>46476576</string>
+     </void>
+     <void property="usuarioAsociado">
+      <string>Daniela rol -- Comprador</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Comprador">
+     <void property="apellido">
+      <string>López</string>
+     </void>
+     <void property="cedula">
+      <string>6767</string>
+     </void>
+     <void property="contrasenia">
+      <string></string>
+     </void>
+     <void property="correo">
+      <string>D@hh</string>
+     </void>
+     <void property="direccion">
+      <string>Calle 7</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>1998-08-29</string>
+     </void>
+     <void property="nombre">
+      <string>Daniela</string>
+     </void>
+     <void property="rol">
+      <string></string>
+     </void>
+     <void property="telefono">
+      <string>68</string>
+     </void>
+     <void property="usuarioAsociado">
+      <string>Daniela rol -- Comprador</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaMensajes">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Chat">
+     <void property="miChat">
+      <string>daniela: Hola </string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Chat">
+     <void property="miChat">
+      <string>daniela: A cómo?
+</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Chat">
+     <void property="miChat">
+      <string>daniela: A mil =====</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Chat">
+     <void property="miChat">
+      <string>yovany: g</string>
      </void>
     </object>
    </void>
@@ -158,7 +316,7 @@
    <void method="add">
     <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
      <void property="codigoUnico">
-      <string>1</string>
+      <string>490</string>
      </void>
      <void property="foto">
       <string></string>
@@ -171,6 +329,71 @@
      </void>
      <void property="tipoProducto">
       <string>VEHICULOS</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Producto">
+     <void property="codigoUnico">
+      <string>777</string>
+     </void>
+     <void property="foto">
+      <string></string>
+     </void>
+     <void property="nombreAnunciante">
+      <string>9999 -- Martin Fierro Nigth</string>
+     </void>
+     <void property="nombreProducto">
+      <string>Lámpara</string>
+     </void>
+     <void property="tipoProducto">
+      <string>HOGAR</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaPujas">
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Puja">
+     <void property="anuncio">
+      <string>490</string>
+     </void>
+     <void property="codigo">
+      <string>ca6db714-8cbc-488c-8046-327a431535e6</string>
+     </void>
+     <void property="comprador">
+      <string>87879898  Pedro Infante</string>
+     </void>
+     <void property="estadoAnuncio">
+      <string>Publicado</string>
+     </void>
+     <void property="oferta">
+      <double>7000000.0</double>
+     </void>
+     <void property="producto">
+      <string>  490  Carro</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.programacion3.subastaquindio.model.Puja">
+     <void property="anuncio">
+      <string>490</string>
+     </void>
+     <void property="codigo">
+      <string>0120fa0d-3c8f-42e9-9e73-16082f10acc8</string>
+     </void>
+     <void property="comprador">
+      <string>87879898  Pedro Infante</string>
+     </void>
+     <void property="estadoAnuncio">
+      <string>Publicado</string>
+     </void>
+     <void property="oferta">
+      <double>6000000.0</double>
+     </void>
+     <void property="producto">
+      <string>  490  Carro</string>
      </void>
     </object>
    </void>

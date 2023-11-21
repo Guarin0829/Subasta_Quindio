@@ -45,11 +45,11 @@
                     <font>
                         <Font size="14.0" />
                     </font></Label>
-                <Label prefHeight="17.0" prefWidth="148.0" text="Fecha de publicación:" GridPane.rowIndex="3">
+                <Label prefHeight="17.0" prefWidth="148.0" text="Hora fin de publicaciòn" GridPane.rowIndex="3">
                     <font>
                         <Font size="14.0" />
                     </font></Label>
-                <Label prefHeight="20.0" prefWidth="158.0" text="Fin fecha de publicación:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                <Label prefHeight="20.0" prefWidth="158.0" text="Fecha de publicación:" GridPane.columnIndex="2" GridPane.rowIndex="3">
                     <font>
                         <Font size="14.0" />
                     </font></Label>
@@ -64,8 +64,8 @@
                     </font>
                 </Label>
                 <TextField fx:id="txfValorInicial" prefHeight="30.0" prefWidth="149.0" promptText="Ingrese el valor inicial " GridPane.rowIndex="7" />
-                <TextField fx:id="txfFechaPublicacion" promptText="Ingrese la fecha" GridPane.rowIndex="4" />
-                <TextField fx:id="txfFechaFinPublicacion" promptText="Ingrese la fecha" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <TextField fx:id="txfFechaPublicacion" promptText="HH:MM:SS" GridPane.rowIndex="4" />
+                <TextField fx:id="txfFechaFinPublicacion" promptText="AAAA-MM-DD" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                 <ComboBox fx:id="cmbProducto" prefHeight="25.0" prefWidth="206.0" GridPane.rowIndex="1" />
                 <ComboBox fx:id="cmbAnunciante" prefHeight="25.0" prefWidth="208.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <ComboBox fx:id="cmbEstadoAnuncio" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
