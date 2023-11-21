@@ -1,6 +1,7 @@
 package co.edu.uniquindio.programacion3.subastaquindio.model;
 
 import co.edu.uniquindio.programacion3.subastaquindio.exceptions.*;
+import static co.edu.uniquindio.programacion3.subastaquindio.viewController.InicioViewController.*;
 import co.edu.uniquindio.programacion3.subastaquindio.model.service.ISubastaQuindioService;
 import co.edu.uniquindio.programacion3.subastaquindio.viewController.PujaViewController;
 import javafx.scene.control.Alert;
@@ -26,6 +27,8 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
     private PujaViewController pujaView = new PujaViewController();
 
     private ArrayList<Puja> listaPujas = new ArrayList<>();
+
+    public static String usuarioChat = "";
 
     public SubastaQuindio() {
 
@@ -323,15 +326,41 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
     }
 
     @Override
-    public boolean usuarioExiste(String nombreUsuario, String password){
+    public boolean usuarioExiste(String cedula, String password){
         boolean usuarioExiste = false;
         for(Usuario usuario : getListaUsuarios()){
-            if(usuario.getUsuario().equalsIgnoreCase(nombreUsuario) &&
+            if(usuario.getUsuario().equalsIgnoreCase(cedula) &&
                     usuario.getContrasenia().equalsIgnoreCase(password)){
                 usuarioExiste = true;
+                usuarioLogeado = cedula;
                 break;
             }
         }
+
+        for(Anunciante anunciante : getListaAnunciantes()){
+            if(anunciante.getCedula().equalsIgnoreCase(cedula) &&
+                    anunciante.getContrasenia().equalsIgnoreCase(password)){
+                usuarioExiste = true;
+                rolUsuarioLogeado = anunciante.getRol();
+                cedulaUsuario = anunciante.getCedula();
+                usuarioLogeado = cedula + " " + anunciante.getNombre() + " " + anunciante.getApellido();
+                usuarioChat = anunciante.getNombre() + " " + anunciante.getApellido();
+                break;
+            }
+        }
+
+        for(Comprador comprador : getListaCompradores()){
+            if(comprador.getCedula().equalsIgnoreCase(cedula) &&
+                    comprador.getContrasenia().equalsIgnoreCase(password)){
+                usuarioExiste = true;
+                rolUsuarioLogeado = comprador.getRol();
+                cedulaUsuario = comprador.getCedula();
+                usuarioLogeado = cedula + " " +comprador.getNombre() +" "+comprador.getApellido();
+                usuarioChat = comprador.getNombre() +" "+comprador.getApellido();
+                break;
+            }
+        }
+
         return usuarioExiste;
     }
 
@@ -485,7 +514,7 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
         this.listaPujas = listaPujas;
     }
 
-    public boolean validarValorPuja(String codigoAnuncio, Double puja) {
+    public boolean validarValorPuja(String codigoAnuncio, String puja) {
         boolean respuesta = false;
         if(!valorMenorPujado(codigoAnuncio, puja)){
             return respuesta;
@@ -495,11 +524,11 @@ public class SubastaQuindio implements ISubastaQuindioService, Serializable {
         return respuesta;
     }
 
-    public boolean valorMenorPujado(String codigoAnuncio, Double puja) {
+    public boolean valorMenorPujado(String codigoAnuncio, String puja) {
         boolean respuesta = false;
         Anuncio anuncio = obtenerAnuncio(codigoAnuncio);
         if(anuncio != null){
-            if (anuncio.getValorInicial() < puja) {
+            if (Double.parseDouble(anuncio.getValorInicial()) < Double.parseDouble(puja)) {
                 respuesta = true;
             }
         }else{

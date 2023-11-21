@@ -21,7 +21,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-11-19T20:33:08-0500",
+    date = "2023-11-21T16:01:40-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.1 (Oracle Corporation)"
 )
 */
@@ -143,7 +143,9 @@ public class SubastaMapperImpl implements SubastaMapper {
         String apellido = null;
         String cedula = null;
         String telefono = null;
+        String contrasenia = null;
         String direccion = null;
+        String rol = null;
         String correo = null;
         String fechaNacimiento = null;
         String usuarioAsociado = null;
@@ -152,12 +154,14 @@ public class SubastaMapperImpl implements SubastaMapper {
         apellido = anunciante.getApellido();
         cedula = anunciante.getCedula();
         telefono = anunciante.getTelefono();
+        contrasenia = anunciante.getContrasenia();
         direccion = anunciante.getDireccion();
+        rol = anunciante.getRol();
         correo = anunciante.getCorreo();
         fechaNacimiento = anunciante.getFechaNacimiento();
         usuarioAsociado = anunciante.getUsuarioAsociado();
 
-        AnuncianteDto anuncianteDto = new AnuncianteDto( nombre, apellido, cedula, telefono, direccion, correo, fechaNacimiento, usuarioAsociado );
+        AnuncianteDto anuncianteDto = new AnuncianteDto( nombre, apellido, cedula, telefono, contrasenia, direccion, rol, correo, fechaNacimiento, usuarioAsociado );
 
         return anuncianteDto;
     }
@@ -173,8 +177,10 @@ public class SubastaMapperImpl implements SubastaMapper {
         anunciante.setCedula( anuncianteDto.cedula() );
         anunciante.setNombre( anuncianteDto.nombre() );
         anunciante.setTelefono( anuncianteDto.telefono() );
+        anunciante.setContrasenia( anuncianteDto.contrasenia() );
         anunciante.setApellido( anuncianteDto.apellido() );
         anunciante.setDireccion( anuncianteDto.direccion() );
+        anunciante.setRol( anuncianteDto.rol() );
         anunciante.setCorreo( anuncianteDto.correo() );
         anunciante.setFechaNacimiento( anuncianteDto.fechaNacimiento() );
         anunciante.setUsuarioAsociado( anuncianteDto.usuarioAsociado() );
@@ -206,7 +212,9 @@ public class SubastaMapperImpl implements SubastaMapper {
         String apellido = null;
         String cedula = null;
         String telefono = null;
+        String contrasenia = null;
         String direccion = null;
+        String rol = null;
         String correo = null;
         String fechaNacimiento = null;
         String usuarioAsociado = null;
@@ -215,12 +223,14 @@ public class SubastaMapperImpl implements SubastaMapper {
         apellido = comprador.getApellido();
         cedula = comprador.getCedula();
         telefono = comprador.getTelefono();
+        contrasenia = comprador.getContrasenia();
         direccion = comprador.getDireccion();
+        rol = comprador.getRol();
         correo = comprador.getCorreo();
         fechaNacimiento = comprador.getFechaNacimiento();
         usuarioAsociado = comprador.getUsuarioAsociado();
 
-        CompradorDto compradorDto = new CompradorDto( nombre, apellido, cedula, telefono, direccion, correo, fechaNacimiento, usuarioAsociado );
+        CompradorDto compradorDto = new CompradorDto( nombre, apellido, cedula, telefono, contrasenia, direccion, rol, correo, fechaNacimiento, usuarioAsociado );
 
         return compradorDto;
     }
@@ -236,8 +246,10 @@ public class SubastaMapperImpl implements SubastaMapper {
         comprador.setCedula( compradorDto.cedula() );
         comprador.setNombre( compradorDto.nombre() );
         comprador.setTelefono( compradorDto.telefono() );
+        comprador.setContrasenia( compradorDto.contrasenia() );
         comprador.setApellido( compradorDto.apellido() );
         comprador.setDireccion( compradorDto.direccion() );
+        comprador.setRol( compradorDto.rol() );
         comprador.setCorreo( compradorDto.correo() );
         comprador.setFechaNacimiento( compradorDto.fechaNacimiento() );
         comprador.setUsuarioAsociado( compradorDto.usuarioAsociado() );
@@ -270,7 +282,7 @@ public class SubastaMapperImpl implements SubastaMapper {
         String anunciante = null;
         String fechaPublicacion = null;
         String fechaFinPublicacion = null;
-        double valorInicial = 0.0d;
+        String valorInicial = null;
         String descripcion = null;
         String foto = null;
         String estado = null;
@@ -335,14 +347,14 @@ public class SubastaMapperImpl implements SubastaMapper {
         String producto = null;
         String anuncio = null;
         String comprador = null;
-        double oferta = 0.0d;
+        String oferta = null;
         String estadoAnuncio = null;
 
         codigo = puja.getCodigo();
         producto = puja.getProducto();
         anuncio = puja.getAnuncio();
         comprador = puja.getComprador();
-        oferta = puja.getOferta();
+        oferta = String.valueOf( puja.getOferta() );
         estadoAnuncio = puja.getEstadoAnuncio();
 
         PujaDto pujaDto = new PujaDto( codigo, producto, anuncio, comprador, oferta, estadoAnuncio );
@@ -360,7 +372,9 @@ public class SubastaMapperImpl implements SubastaMapper {
 
         puja.setCodigo( pujaDto.codigo() );
         puja.setComprador( pujaDto.comprador() );
-        puja.setOferta( pujaDto.oferta() );
+        if ( pujaDto.oferta() != null ) {
+            puja.setOferta( Double.parseDouble( pujaDto.oferta() ) );
+        }
         puja.setProducto( pujaDto.producto() );
         puja.setAnuncio( pujaDto.anuncio() );
         puja.setEstadoAnuncio( pujaDto.estadoAnuncio() );

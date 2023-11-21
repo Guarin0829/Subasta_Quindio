@@ -248,16 +248,7 @@ public class PujaViewController extends Frame {
         String producto = String.valueOf(cmbProducto.getValue());
         String codigoAnuncio = txfCodigoAnuncio.getText();
         String comprador = obtenerUsuarioComprador();
-        Double oferta;
-
-        String textoOferta = txfOferta.getText();
-
-        if (textoOferta == null || textoOferta.isEmpty()) {
-            oferta = 0.0;
-        } else {
-            oferta = Double.valueOf(textoOferta);
-        }
-
+        String oferta = txfOferta.getText();;
         String estadoAnuncio = obtenerEstadoAnuncio();
         return new PujaDto(codigoPuja, producto, codigoAnuncio, comprador, oferta, estadoAnuncio);
     }
@@ -293,7 +284,7 @@ public class PujaViewController extends Frame {
             mensaje += "El código del anuncio de la puja es invalido \n" ;
         if(pujaDto.comprador() == null || pujaDto.comprador().equals(""))
             mensaje += "El comprador de la puja es invalida \n" ;
-        if(pujaDto.oferta() == 0.0 )
+        if(pujaDto.oferta() == null || pujaDto.oferta().equals("") )
             mensaje += "la oferta de la puja es invalida, debe agregar un valor de oferta \n" ;
         if(pujaDto.estadoAnuncio() == null || pujaDto.estadoAnuncio().equals(""))
             mensaje += "El estado del anuncio de la puja es invalida \n" ;

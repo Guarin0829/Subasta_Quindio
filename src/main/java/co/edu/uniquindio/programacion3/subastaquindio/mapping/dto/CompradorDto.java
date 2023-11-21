@@ -5,7 +5,9 @@ public record CompradorDto(
         String apellido,
         String cedula,
         String telefono,
+        String contrasenia,
         String direccion,
+        String rol,
         String correo,
         String fechaNacimiento,
         String usuarioAsociado) {

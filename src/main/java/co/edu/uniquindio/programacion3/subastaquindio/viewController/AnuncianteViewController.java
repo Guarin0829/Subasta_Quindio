@@ -288,7 +288,7 @@ public class AnuncianteViewController {
         String correo = txfCorreo.getText();
         String fechaNacimiento = txfFechaNacimiento.getText();
         String usuarioAsociado = String.valueOf(cmbUsuario.getValue());
-        return new AnuncianteDto(nombre, apellido, cedula, telefono,direccion, correo, fechaNacimiento, usuarioAsociado);
+        return new AnuncianteDto(nombre, apellido, cedula, telefono, "",direccion, "",correo, fechaNacimiento, usuarioAsociado);
     }
 
     private void limpiarCamposAnunciantes() {

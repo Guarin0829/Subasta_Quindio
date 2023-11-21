@@ -8,7 +8,7 @@ public record AnuncioDto(
         String anunciante,
         String fechaPublicacion,
         String fechaFinPublicacion,
-        double valorInicial,
+        String valorInicial,
         String descripcion,
         String foto,
         String estado) {
@@ -18,7 +18,7 @@ public record AnuncioDto(
     }
 
     public AnuncianteDto getAnuncianteDto(){
-        return new AnuncianteDto(anunciante,"", "", "","","","","");
+        return new AnuncianteDto(anunciante,"", "", "","","","","","","");
     }
 
 }

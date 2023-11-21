@@ -283,7 +283,7 @@ public class CompradorViewController {
         String correo = txfCorreo.getText();
         String fechaNacimiento = txfFechaNacimiento.getText();
         String usuarioAsociado = String.valueOf(cmbUsuario.getValue());
-        return new CompradorDto(nombre, apellido, cedula, telefono,direccion, correo, fechaNacimiento, usuarioAsociado);
+        return new CompradorDto(nombre, apellido, cedula, telefono, "",direccion, "",correo, fechaNacimiento, usuarioAsociado);
     }
 
     private void limpiarCamposAnunciantes() {
