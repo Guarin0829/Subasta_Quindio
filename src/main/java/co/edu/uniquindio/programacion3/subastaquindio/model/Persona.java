@@ -9,7 +9,9 @@ public abstract class Persona implements Serializable {
     private String apellido;
     private String cedula;
     private String telefono;
+    private String contrasenia;
     private String direccion;
+    private String rol;
     private String correo;
     private String fechaNacimiento;
 
@@ -43,6 +45,13 @@ public abstract class Persona implements Serializable {
         this.telefono = telefono;
     }
 
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
+    }
 
     public String getApellido() {
         return apellido;
@@ -63,6 +72,13 @@ public abstract class Persona implements Serializable {
         this.direccion = direccion;
     }
 
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 
     public String getCorreo() {
         return correo;

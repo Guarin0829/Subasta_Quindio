@@ -32,9 +32,59 @@ public class ModelFactoryController implements IModelFactoryService, Runnable {
     PujaViewController pujaView = new PujaViewController();
     SubastaMapper mapper = SubastaMapper.INSTANCE;
 
+    BoundedSemaphore semaphore = new BoundedSemaphore(1);
+
+    String mensaje;
+    int nivel;
+    String accion;
+
+    Thread hiloServicio1_guardarResourceXml;
+    Thread hiloServicio2_guardarRegistroLog;
+    Thread hiloServicio3_guardarCopiaXml;
+    Thread hiloServicio4_nuevoMensajeConsumer;
+
     @Override
     public void run() {
+        Thread hiloActual = Thread.currentThread();
+        ocuparSemaforo();
+        if(hiloActual == hiloServicio1_guardarResourceXml){
+            Persistencia.guardarRecursoSubastaXML(subasta);
+            liberarSemaforo();
+        }
 
+        if(hiloActual == hiloServicio2_guardarRegistroLog){
+            Persistencia.guardaRegistroLog(mensaje, nivel, accion);
+            liberarSemaforo();
+
+        }
+
+        if(hiloActual == hiloServicio3_guardarCopiaXml){
+            Persistencia.copiarArchivoRespaldoXml();
+            liberarSemaforo();
+
+        }
+        if(hiloActual == hiloServicio4_nuevoMensajeConsumer){
+            //consumirMensajes();
+        }
+
+    }
+
+    private void ocuparSemaforo() {
+        try {
+            semaphore.ocupar();
+
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    private void liberarSemaforo() {
+        try {
+            semaphore.liberar();
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     //------------------------------  Singleton ------------------------------------------------
@@ -406,7 +456,7 @@ public class ModelFactoryController implements IModelFactoryService, Runnable {
         }
     }
 
-    public boolean validarValorPuja(String codigo, Double puja){
+    public boolean validarValorPuja(String codigo, String puja){
         return getSubasta().validarValorPuja(codigo, puja);
     }
 
@@ -517,6 +567,16 @@ public class ModelFactoryController implements IModelFactoryService, Runnable {
         //consumirMensajesServicio4();
         //guardarResourceXML();
         return  mapper.getChatDto(subasta.getListaMensajes());
+    }
+
+    public void consumirMensajesServicio4(){
+        hiloServicio4_nuevoMensajeConsumer = new Thread(this);
+        hiloServicio4_nuevoMensajeConsumer.start();
+    }
+
+    public void guardarRespaldosXml(){
+        hiloServicio3_guardarCopiaXml = new Thread(this);
+        hiloServicio3_guardarCopiaXml.start();
     }
 
 

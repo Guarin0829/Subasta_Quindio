@@ -1,7 +1,9 @@
+co\edu\uniquindio\programacion3\subastaquindio\controller\HistorialController.class
 co\edu\uniquindio\programacion3\subastaquindio\model\service\ISubastaQuindioService.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\UsuarioController.class
 co\edu\uniquindio\programacion3\subastaquindio\mapping\dto\CompradorDto.class
 co\edu\uniquindio\programacion3\subastaquindio\viewController\AnuncianteViewController.class
+co\edu\uniquindio\programacion3\subastaquindio\controller\BoundedSemaphore.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\PujaController.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Usuario.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\CompradorController.class
@@ -15,6 +17,7 @@ co\edu\uniquindio\programacion3\subastaquindio\model\service\IProductoService.cl
 co\edu\uniquindio\programacion3\subastaquindio\exceptions\AnuncioException.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Chat.class
 co\edu\uniquindio\programacion3\subastaquindio\Main.class
+co\edu\uniquindio\programacion3\subastaquindio\viewController\HistorialViewController.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Anunciante.class
 co\edu\uniquindio\programacion3\subastaquindio\model\SubastaApplication.class
 co\edu\uniquindio\programacion3\subastaquindio\exceptions\UsuarioException.class
@@ -44,6 +47,7 @@ co\edu\uniquindio\programacion3\subastaquindio\utils\ListaAnuncioUtil.class
 co\edu\uniquindio\programacion3\subastaquindio\utils\SubastaUtils.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\InicioController.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Anuncio.class
+co\edu\uniquindio\programacion3\subastaquindio\exceptions\HistorialException.class
 co\edu\uniquindio\programacion3\subastaquindio\controller\service\IProductoControllerService.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Persona.class
 co\edu\uniquindio\programacion3\subastaquindio\model\Producto.class
