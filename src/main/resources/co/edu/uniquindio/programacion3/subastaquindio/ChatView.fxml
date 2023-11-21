@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="473.0" prefWidth="774.0" stylesheets="@tema.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.programacion3.subastaquindio.viewController.ChatViewController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecf1f5" height="446.0" layoutX="7.0" layoutY="14.0" stroke="#b5aeae" strokeType="INSIDE" width="761.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d6e4e8" height="446.0" layoutX="7.0" layoutY="14.0" stroke="#b5aeae" strokeType="INSIDE" width="761.0" />
         <TextArea fx:id="txtAreaChat_chat" editable="false" layoutX="15.0" layoutY="82.0" prefHeight="142.0" prefWidth="743.0">
             <font>
                 <Font size="18.0" />

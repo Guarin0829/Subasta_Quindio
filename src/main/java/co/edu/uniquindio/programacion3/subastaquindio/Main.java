@@ -13,10 +13,11 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("InicioView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 750, 500);
-        stage.setTitle("Subasta Quindio!");
+        stage.setTitle("Subasta Quindío!");
         stage.setScene(scene);
         stage.show();
     }
+
 
     public void cargarVentanaInicio() {
         try {
